@@ -3,9 +3,10 @@ package BMI;
 import java.util.Scanner;
 
 public class BMI_Main {
-	Scanner sanner = new Scanner(System.in);
+//	Scanner sanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
 		
 		// 이름을 입력받는 함수
 		// 나이를 입력받는 함수
@@ -59,6 +60,8 @@ public class BMI_Main {
 			stringChk = name.matches(".*\\d.*");
 		}
 		
+		sanner.close();
+		
 		return name;
 	}
 	
@@ -76,6 +79,8 @@ public class BMI_Main {
 		}
 		
 		age = sanner.nextInt();
+		
+		sanner.close();
 		
 		return age;
 	}
@@ -108,6 +113,8 @@ public class BMI_Main {
 			}
 		}
 		
+		sanner.close();
+		
 		return gender;
 	}
 	
@@ -124,6 +131,8 @@ public class BMI_Main {
 		}
 		
 		height = sanner.nextDouble();
+		
+		sanner.close();
 		
 		return height;
 	}
@@ -142,6 +151,8 @@ public class BMI_Main {
 		
 		weight = sanner.nextDouble();
 		
+		sanner.close();
+		
 		return weight;
 	}
 	
@@ -150,6 +161,8 @@ public class BMI_Main {
 		
 		Double BMI = weight / (height * height) * 10000;
 		BMI = Math.floor(BMI * 100) / 100.0;
+		
+		sanner.close();
 
 		return BMI;
 	}
